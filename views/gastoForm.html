@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="alert alert-warning" ng-show="gastoForm.$dirty && gastoForm.$invalid">
+            Por favor ingrese valores válidos en todos los campos requeridos
+        </div>
+        <form name="gastoForm">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Descripcion" 
+                ng-model="gasto.description" required>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" placeholder="0.00" 
+                ng-model="gasto.amount" required>
+            </div>
+            <div class="form-group">
+                <input type="date" class="form-control" ng-model="gasto.date" required>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-success btn-lg btn-block" 
+                    ng-click="gastoForm.$valid && save()">
+                    <i class="fa fa-check"> Guardar</i>
+                </button>
+            </div>
+            <div class="form-group">
+                <a href="#!gastos" class="btn btn-default btn-lg btn-block">
+                    <i class="fa fa-remove"> Cancelar</i>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>

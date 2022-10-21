@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Seguimiento de Gastos</title>
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>   
+    
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>    
+
+    <nav class="navbar navbar-default bg-light" ng-controller="GastosViewController">
+      <div class="container-fluid">        
+        <span class="navbar-brand" ng-click="inicio()"> 
+          <img src="img/favicon.ico" alt="Logo" 
+          height="35" class="navbar-brand">         
+          <!--<a href="#!"></a>-->{{title}}
+        </span>
+      </div>
+    </nav>
+
+    <div class="container" ng-view></div>
+    
+    <script type="text/javascript" src="js/underscore-min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>

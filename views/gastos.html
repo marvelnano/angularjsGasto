@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-xs-12 button-row">
+    <a href="#!gastos/nuevo" class="btn btn-success btn-lg btn-block">          
+        <i class="fa fa-plus"> Nuevo Gasto</i>
+    </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Descripción</th>
+                    <th>Fecha</th>
+                    <th>Monto</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="gasto in gastos">
+                    <!--<jvr-gasto></jvr-gasto>-->
+                    <td>{{gasto.id}}</td>
+                    <td>{{gasto.description | uppercase}}</td>
+                    <td>{{gasto.date | date:"dd-MM-yyyy"}}</td>
+                    <td>${{gasto.amount | number:2}}</td>                    
+                    <td>
+                        <button type="button" 
+                        class="btn btn-danger btn-s pull-right btn-separation-left"
+                        ng-click="remove(gasto)">          
+                        <i class="fa fa-trash"></i>
+                        </button>
+                        <a href="#!gastos/edit/{{gasto.id}}" class="btn btn-primary btn-s pull-right">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr><th>Total:</th>
+                    <td></td>
+                    <td></td>
+                    <th>{{getTotalGasto() | currency}}</th>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

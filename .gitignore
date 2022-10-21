@@ -1,0 +1,51 @@
+## Ejemplos de igtignore
+## Ignora archivos del sistema Mac 
+# .DS_store
+
+## Ignora la carpeta node_modules
+# node_modules
+
+## Ignora todos los archivos de texto
+# *.txt
+
+## Ignora los archivos relacionados a API keys
+# .env
+
+## Ignora archivos de configuración SASS
+# .sass-cache
+
+## Aprender github: https://www.atlassian.com/es/git/tutorials/saving-changes/gitignore
+## Para ignorar archivos o carpetas que ya han sido subidos
+## y se quieren agregar al .gitignore
+# git rm -r --cached debug.log
+# git commit -m "Start ignoring debug.log"
+# git rm -r --cached node_modules
+# git commit -m "Start ignoring node_modules"
+
+## Como eliminar un repositorio local en Git
+# ls -al (Ver todos los archivos y directorios de la carpeta actual)
+# rm -rf .git (se elimina archivo .git y ya no estará vinculado al repositorio)
+
+## Actualizar repositorio desde carpeta local
+# git init
+# git remote add origin https://github.com/marvelnano/angularjsGasto.git
+# git add .
+# git commit -m "comentario"
+# git push -u origin master -f (-f para forzar en caso de error)
+
+## Como crear, cambiar y eliminar ramas (https://www.youtube.com/watch?v=j0U9jBmP3LM)
+# git checkout -b nombrerama
+# git branch (lista todas las ramas)
+# git checkout nombrerama (cambia a la rama seleccionada)
+# git checkout master (nos cambiamos a la rama master, antes de eliminar otra rama)
+# git branch -m nombreacturalrama nombrenuevorama (cambia el nombre de la rama)
+# git branch -d nombrerama (se elimina la rama)
+
+# Ignora la carpeta db del proyecto
+.DS_store
+node_modules
+
+# Ignora archivos individuales
+*.DS_Store
+*.log
+*.lnk
